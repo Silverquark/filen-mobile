@@ -355,7 +355,7 @@ export class AuthService {
 	}): Promise<void> {
 		if (!email) {
 			const emailPrompt = await inputPrompt({
-				title: t("translation:auth.prompts.forgotPassword.title"),
+				title: t("auth.prompts.forgotPassword.title"),
 				message: t("auth.register.form.email.placeholder"),
 				materialIcon: {
 					name: "email-outline"
