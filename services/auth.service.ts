@@ -81,7 +81,7 @@ export class AuthService {
 					: nodeWorker.proxy("reinitSDK", {
 							sdkConfig,
 							tmpPath
-					  }),
+						}),
 				thumbnailWarmup,
 				i18n,
 				assetsCopy
@@ -300,6 +300,7 @@ export class AuthService {
 		if (!email) {
 			const emailPrompt = await inputPrompt({
 				title: t("auth.prompts.resendConfirmation.title"),
+				message: t("auth.register.form.email.placeholder"),
 				materialIcon: {
 					name: "email-outline"
 				},
@@ -354,7 +355,8 @@ export class AuthService {
 	}): Promise<void> {
 		if (!email) {
 			const emailPrompt = await inputPrompt({
-				title: t("auth.prompts.forgotPassword.title"),
+				title: t("translation:auth.prompts.forgotPassword.title"),
+				message: t("auth.register.form.email.placeholder"),
 				materialIcon: {
 					name: "email-outline"
 				},
